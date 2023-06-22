@@ -28,7 +28,10 @@ def savings(gross_pay, tax_rate, expenses):
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     taxes = int(tax_rate*gross_pay)
     net = int(gross_pay-taxes-expenses)
-    return net
+    print(net)
+
+savings(5000,0.3,500)
+
 def material_waste(total_material, material_units, num_jobs, job_consumption):
     '''Material Waste.
     5 points.
@@ -64,7 +67,10 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     total_consumption = num_jobs*job_consumption
     waste = str(total_material-total_consumption)+str(material_units)
-    return waste
+    print(waste)
+
+material_waste(5000,"kg",50,50)
+
 def interest(principal, rate, periods):
     '''Interest.
     5 points.
@@ -95,4 +101,48 @@ def interest(principal, rate, periods):
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     simple_interest = int(principal*rate*periods)
     final = int(principal+simple_interest)
-    return final
+    print(final)
+
+interest(5000,0.05,6)
+
+def body_mass_index(weight, height):
+    '''Body Mass Index.
+    5 points.
+
+    This function calculates the body mass index (BMI) of a person
+        given their weight and height.
+
+    The formula for BMI is: kg / (m ^ 2)
+        (i.e., kilograms over meters squared)
+
+    Unfortunately, the users of this function use the imperial system.
+        You will need to first convert their arguments to the metric system.
+
+    Parameters
+    ----------
+    weight: float
+        the weight of the person, in pounds
+    height: list
+        the height of the person, expressed as a list of two integers.
+        the first integer is the foot component of their height.
+        the second integer is the inches component of their height.
+        for example, 5'10" would be passed as [5, 10].
+
+    We have not yet discussed lists, but use the skills you developed
+        in the command line exercise. How would you learn how to work with
+        lists?
+
+    Returns
+    -------
+    float
+        the BMI of the person.
+    '''
+    # Replace `pass` with your code.
+    # Stay within the function. Only use the parameters as input. The function should return your answer.
+    kg = weight/2.205
+    m2 = ((int(str(height)[0])*12+int(str(height)[1]))*0.0254)**2
+    bmi = kg/m2
+    print(bmi)
+
+body_mass_index(100,55)
+

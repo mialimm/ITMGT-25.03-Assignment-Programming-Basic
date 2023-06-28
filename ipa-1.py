@@ -140,8 +140,8 @@ def body_mass_index(weight, height):
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     kg = weight/2.205
-    m2 = ((int(str(height)[0])*12+int(str(height)[1]))*0.0254)**2
+    m2 = ((int((height)[0])*12+int((height)[1]))*0.0254)**2
     bmi = kg/m2
     return bmi
 
-body_mass_index(100,55)
+body_mass_index(100, [5,5])
